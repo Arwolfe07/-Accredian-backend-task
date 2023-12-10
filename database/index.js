@@ -12,13 +12,11 @@ const DB = sql.createPool({
 
 
 DB.getConnection((err, conn) => {
-    DB.connect((err) => {
         if (err) {
             console.log("Error Connecting DB: ", err);
             return;
         }
         console.log("Database Connected Successfully!");
-    });
 });
 
 module.exports = DB;
